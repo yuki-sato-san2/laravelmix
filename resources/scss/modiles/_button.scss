@@ -1,3 +1,9 @@
+@use '../Lib/device';
+
 .button {
     font-size: 40px;
+
+    @include device.mobile {
+        font-size: 20px;
+    }
 }
