@@ -4,6 +4,28 @@
   let name = "山田";
   %>
   <h1>こんにちは <%= name %>さん</h1>
+
+  <%
+  let lists = [
+    {
+      id: 'apple',
+      name: 'りんご'
+    },
+    {
+      id: 'gorilla',
+      name: 'ごりら'
+    },
+    {
+      id: 'trumpet',
+      name: 'ラッパ',
+    },
+  ];
+  %>
+  <ul>
+    <% lists.forEach(element => { %>
+      <li class="<%= element.id %>"><%= element.name %></li>
+      <% }); %>
+  </ul>
 <%- include('./partials/_footer') %>
 </body>
 </html>
