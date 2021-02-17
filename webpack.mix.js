@@ -40,6 +40,8 @@ mix
   ]
 })
 
+.copy(`resources/images/`, `public/assets/images`)
+
 // browserSync
 // URL: https://browsersync.io/docs/options/
 .browserSync(
