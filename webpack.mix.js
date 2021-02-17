@@ -40,6 +40,8 @@ mix
   ]
 })
 
+.sourceMaps(false, 'inline-cheap-module-source-map')// cssのマップを出力ファイルに追記する形で用意する
+
 .copy(`resources/images/`, `public/assets/images`)
 
 // browserSync
