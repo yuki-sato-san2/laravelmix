@@ -1,3 +1,4 @@
+let path = require('path');
 let mix = require('laravel-mix');
 let fs = require('fs-extra');
 require('laravel-mix-polyfill');
@@ -38,6 +39,10 @@ mix
       })
   ]
 })
+
+.sourceMaps(false, 'inline-cheap-module-source-map')// cssのマップを出力ファイルに追記する形で用意する
+
+.copy(`resources/images/`, `public/assets/images`)
 
 // browserSync
 // URL: https://browsersync.io/docs/options/
