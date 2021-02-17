@@ -1,3 +1,4 @@
+let path = require('path');
 let mix = require('laravel-mix');
 let fs = require('fs-extra');
 require('laravel-mix-polyfill');
