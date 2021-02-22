@@ -1,0 +1,77 @@
+$breakpoint-sm:  360px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-lg: 1000px !default;
+$breakpoint-xl: 1200px !default;
+
+/*
+* media base mixin
+*/
+@mixin screen($resMin, $resMax) {
+  @media screen and (min-width: $resMin) and (max-width: $resMax) {
+    @content;
+  }
+}
+
+@mixin max-screen($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}
+
+@mixin min-screen($res) {
+  @media screen and (min-width: $res) {
+    @content;
+  }
+}
+
+@mixin screen-height($resMin, $resMax) {
+  @media screen and (min-height: $resMin) and (max-height: $resMax) {
+    @content;
+  }
+}
+
+@mixin max-screen-height($res) {
+  @media screen and (max-height: $res) {
+    @content;
+  }
+}
+
+@mixin min-screen-height($res) {
+  @media screen and (min-height: $res) {
+    @content;
+  }
+}
+
+/*
+* media
+*/
+@mixin mobile() {
+  @include max-screen($breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  // 568px: iphone5の横向きでの横幅
+  @include screen(568px, $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin pcCustom($size) {
+  @include screen($breakpoint-md + 1, $size) {
+    @content;
+  }
+}
+
+@mixin pc() {
+  @include min-screen($breakpoint-md + 1) {
+    @content;
+  }
+}
+
+@mixin pcWide() {
+  @include min-screen($breakpoint-lg + 1) {
+    @content;
+  }
+}

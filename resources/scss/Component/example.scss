@@ -1,4 +1,10 @@
+@use '../Tool/device';
+
 .example {
     color: red;
     font-weight: bold;
+
+    @include device.pc {
+        color: blue;
+    }
 }
