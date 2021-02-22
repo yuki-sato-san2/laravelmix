@@ -2,6 +2,7 @@ import $ from 'jquery';
 export default class HelloTitle {
     constructor() {
         this.$title = $('#js-title');
+        this.bindEvents();
     }
 
     bindEvents() {
