@@ -1,10 +1,13 @@
 @use '../Tool/device';
+@use '../Tool/fontSize';
 
 .example {
     color: red;
     font-weight: bold;
+    @include fontSize.set(18);
 
     @include device.pc {
         color: blue;
+        @include fontSize.set(24);
     }
 }

@@ -1,0 +1,26 @@
+@use './device';
+
+/* === fontSize === */
+// 第一引数で基準となる画面幅のフォントサイズ、第二引数で基準となる画面幅を入力
+@function getVw($size, $viewport: 375) {
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+@mixin set($size: 14) {
+  font-size: $size + px;
+  font-size: ($size / 10) + rem;
+  font-size: getVw($size);
+
+  @include device.pc {
+    font-size: $size + px;
+    font-size: ($size / 10) + rem;
+  }
+}
+
+// vwを使わない場合
+@mixin setFix($size: 14) {
+  font-size: $size + px;
+  font-size: ($size / 10) + rem;
+}
+
