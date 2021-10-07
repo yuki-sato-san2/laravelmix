@@ -1,5 +1,5 @@
 {
-  "name": "Starting environment for laravel-mix",
+  "name": "laravel-mix-starter",
   "version": "v1.1.0",
   "description": "hello laravel mix",
   "main": "index.js",
@@ -11,6 +11,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "fs-extra": "^9.0.1",
     "laravel-mix": "^6.0.11",
+    "laravel-mix-copy-watched": "^2.3.1",
     "prettier": "^2.4.1",
     "stylelint-config-recess-order": "^2.5.0",
     "stylelint-order": "^4.1.0"

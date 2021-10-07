@@ -1,4 +1,4 @@
-# Starting environment for laravel-mix
+# laravel-mix-starter
 ## Laravel Mix
 
 webpackベースの Laravel Mix を使用した開発環境です。

@@ -5,11 +5,15 @@ require('laravel-mix-polyfill');
 require('laravel-mix-ejs');
 require('laravel-mix-eslint');
 require('laravel-mix-stylelint');
+require('laravel-mix-copy-watched');
 
 const styleLintPlugin = require('stylelint-webpack-plugin');
 
-// 初期化
-fs.removeSync(`public/`);
+const srcPath = 'resources/';
+const distPath = 'public/';
+
+// 【注意】初期化対象の指定
+fs.removeSync(distPath);
 
 /**
  * 乱数生成
@@ -34,9 +38,6 @@ const ejsMix = (filePath) => {
 	}
 	return filePath;
 };
-
-const srcPath = 'resources/';
-const distPath = 'public/';
 
 mix
 	.ejs(
@@ -79,7 +80,7 @@ mix
 	})
 
 	.sourceMaps(false, 'inline-cheap-module-source-map') // cssのマップを出力ファイルに追記する形で用意する
-	.copy(`${srcPath}images/`, `${distPath}assets/images`)
+	.copyWatched(`${srcPath}images/`, `${distPath}assets/images`)
 	// browserSync
 	// URL: https://browsersync.io/docs/options/
 	.browserSync({
