@@ -1,6 +1,6 @@
-let path = require('path');
-let mix = require('laravel-mix');
-let fs = require('fs-extra');
+const path = require('path');
+const mix = require('laravel-mix');
+const fs = require('fs-extra');
 require('laravel-mix-polyfill');
 require('laravel-mix-ejs');
 require('laravel-mix-eslint');
@@ -28,35 +28,38 @@ const clearStr = getRandomStr(); // キャッシュクリア パラメーター�
  *
  * @param {*} filePath
  */
-let ejsMix = (filePath) => {
+const ejsMix = (filePath) => {
 	if (process.env.NODE_ENV === 'production') {
 		return filePath + '?id=' + clearStr;
 	}
 	return filePath;
 };
 
+const srcPath = 'resources/';
+const distPath = 'public/';
+
 mix
 	.ejs(
-		'resources/views/**/*.ejs',
-		'public',
+		`${srcPath}views/**/*.ejs`,
+		distPath,
 		{
 			mix: ejsMix,
 		},
 		{
-			root: 'resources/views',
-			base: 'resources/views',
-			partials: 'resources/views/partials',
+			root: `${srcPath}views`,
+			base: `${srcPath}views`,
+			partials: `${srcPath}views/partials`,
 		},
 	)
 	// [polyfill](https://laravel-mix.com/extensions/polyfill)
-	.polyfill({})
+	.polyfill()
 
 	// javascript
-	.js('resources/js/app.js', 'public/assets/js/')
+	.js(`${srcPath}js/app.js`, `${distPath}assets/js/`)
 	.eslint()
 
 	// Scss
-	.sass('resources/scss/style.scss', 'public/assets/css/')
+	.sass(`${srcPath}scss/style.scss`, `${distPath}/assets/css/`)
 	.options({
 		processCssUrls: false,
 		postCss: [
@@ -68,7 +71,7 @@ mix
 	.webpackConfig({
 		plugins: [
 			new styleLintPlugin({
-				files: ['resources/**/*.scss'],
+				files: [`${srcPath}**/*.scss`],
 				configFile: path.join(__dirname, '.stylelintrc.js'),
 				syntax: 'scss',
 			}),
@@ -76,11 +79,11 @@ mix
 	})
 
 	.sourceMaps(false, 'inline-cheap-module-source-map') // cssのマップを出力ファイルに追記する形で用意する
-	.copy(`resources/images/`, `public/assets/images`)
+	.copy(`${srcPath}images/`, `${distPath}assets/images`)
 	// browserSync
 	// URL: https://browsersync.io/docs/options/
 	.browserSync({
-		files: 'public/**/*',
-		server: 'public',
+		files: `${distPath}**/*`,
+		server: distPath,
 		proxy: false,
 	});
