@@ -1,6 +1,6 @@
 {
-  "name": "laravel-mix",
-  "version": "1.0.0",
+  "name": "Starting environment for laravel-mix",
+  "version": "1.1.0",
   "description": "hello laravel mix",
   "main": "index.js",
   "dependencies": {
