@@ -1,9 +1,10 @@
-# Laravel Mix
+# Starting environment for laravel-mix
+## Laravel Mix
 
 webpackベースの Laravel Mix を使用した開発環境です。
 公式ドキュメント: [リンク](https://laravel-mix.com/docs/6.0/installation)
 
-## 必要な環境
+### 必要な環境
 
 - node.js
 - npm
@@ -14,26 +15,26 @@ webpackベースの Laravel Mix を使用した開発環境です。
 Github: [JeffreyWay / laravel-mix](https://github.com/JeffreyWay/laravel-mix)
 
 
-## 環境準備
+### 環境準備
 
-### モジュールのインストール
+#### モジュールのインストール
 ```
 $ yarn
 ```
 
-### ビルド
+#### ビルド
 
-#### 開発ビルド
+##### 開発ビルド
 ```
 $ yarn development
 ```
 
-#### 監視ビルド
+##### 監視ビルド
 ```
 $ yarn watch
 ```
 
-#### 本番ビルド
+##### 本番ビルド
 ```
 $ yarn production
 ```

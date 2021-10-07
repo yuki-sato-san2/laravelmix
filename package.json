@@ -1,13 +1,19 @@
 {
-  "name": "laravel-mix",
-  "version": "1.0.0",
+  "name": "Starting environment for laravel-mix",
+  "version": "v1.1.0",
   "description": "hello laravel mix",
   "main": "index.js",
   "dependencies": {
     "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
     "fs-extra": "^9.0.1",
-    "laravel-mix": "^6.0.11"
+    "laravel-mix": "^6.0.11",
+    "prettier": "^2.4.1",
+    "stylelint-config-recess-order": "^2.5.0",
+    "stylelint-order": "^4.1.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
@@ -24,7 +30,7 @@
     "sass": "^1.26.8",
     "sass-loader": "^8.0.2",
     "stylelint": "^13.6.1",
-    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-config-recommended-scss": "^4.3.0",
     "stylelint-scss": "^3.18.0",
     "stylelint-webpack-plugin": "^2.1.0",
     "vue-template-compiler": "^2.6.11"
