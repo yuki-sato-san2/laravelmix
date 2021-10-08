@@ -10,9 +10,7 @@
   "[json]": {
       "editor.formatOnSave": true,
   },
-  "[typescript]": {
-      "editor.formatOnSave": true,
-  },
+  "stylelint.validate": ["css", "html", "scss"],
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
