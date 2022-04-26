@@ -1,4 +1,7 @@
 # laravel-mix-starter
+
+## Reactが使いたい場合
+Reactを使いたい場合[Reactブランチ](https://github.com/yuki-sato-san2/laravelmix/tree/react)を使用してください。
 ## Laravel Mix
 
 webpackベースの Laravel Mix を使用した開発環境です。
