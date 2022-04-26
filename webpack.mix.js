@@ -61,6 +61,7 @@ mix
 
 	// javascript
 	.js(`${srcPath}js/app.js`, `${distPath}assets/js/`)
+	.react()
 	.eslint()
 
 	// Scss

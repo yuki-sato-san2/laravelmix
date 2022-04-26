@@ -1,7 +1,9 @@
-import ExampleMobule from './module/ExampleMobule';
+/* eslint func-names: 0 */
+import React from 'react';
+import { render } from 'react-dom';
+import FaqTemplate from './components/templates/FaqTemplate/index';
 
-let exampleMobule = new ExampleMobule();
-
-window.addEventListener('load', () => {
-	exampleMobule.alert('Taro');
-});
+let appFaq = document.getElementById('js-faq');
+if (appFaq) {
+	render(<FaqTemplate />, appFaq);
+}
