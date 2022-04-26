@@ -45,6 +45,10 @@ mix
 		distPath,
 		{
 			mix: ejsMix,
+			ASSETS_IMAGE: `/assets/images/`,
+			ASSETS_CSS: `/assets/css/`,
+			ASSETS_JS: `/assets/js/`,
+			ASSETS_LIB: `/assets/lib/`,
 		},
 		{
 			root: `${srcPath}views`,

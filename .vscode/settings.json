@@ -1,9 +1,9 @@
 {
   "editor.renderWhitespace": "all",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[html]": {
-    "editor.formatOnSave": true,
-},
+//   "[html]": {
+//     "editor.formatOnSave": true,
+// },
   "[javascript]": {
       "editor.formatOnSave": true,
   },

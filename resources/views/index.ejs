@@ -1,8 +1,31 @@
 
-<%- include('./partials/_header') %>
-  <h1>sample ejs</h1>
-  <img src="<%= mix('/assets/images/300x300.png') %>" alt="サンプル画像">
-<%- include('./partials/_footer') %>
-<script src="<%= mix('/assets/js/app.js') %>" async></script>
+<!DOCTYPE html>
+<%
+const options = {
+	title: "Site title",
+	description: "Description text",
+	ogimage: `${ASSETS_IMAGE}ogp.jpg`,
+	noIndex: true,
+	currentUrl: '/',
+	base: './'
+}
+%>
+<html lang="ja">
+	<head>
+		<%- include(`${options.base}partials/head`, {options}) %>
+	</head>
+	<body>
+		<%- include(`${options.base}partials/gtm-body`) %>
+		<%
+		const props = {
+			title: `Sample <span>page</span>`,
+			image: {
+				src: mix('/assets/images/300x300.png'),
+				alt: `sample`,
+			}
+		};
+		%>
+		<%- include(`${options.base}partials/components/templates/topTemplate/index.ejs`, {props}) %>
+	<script src="<%= mix('/assets/js/app.js') %>" async></script>
 </body>
 </html>

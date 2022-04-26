@@ -1,0 +1,25 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<link rel="stylesheet" href="<%= mix(`${ASSETS_CSS}style.css`) %>" />
+<title><%= options.title %></title>
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="<%= options.description%>">
+<link rel="shortcut icon" sizes="any" href="https://jp.sansan.com<%= `${ASSETS_IMAGE}favicon.ico` %>">
+<link rel="apple-touch-icon" sizes="128x128" href="https://jp.sansan.com<%= mix(`${ASSETS_IMAGE}apple-touch-icon.png`) %>">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<% if (options.noIndex) { %>
+	<meta name="robots" content="noindex, nofollow">
+<% } %>
+
+<meta property="og:url" content="https://jp.sansan.com<%= options.currentUrl %>" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="<%= options.title %>" />
+<meta property="og:description" content=" <%= options.description%>" />
+<meta property="og:site_name" content="<%= options.title %>" />
+<meta property="og:image" content="https://jp.sansan.com<%= options.ogimage %>" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<%= options.title %>">
+<meta name="twitter:description" content="<%= options.description%>">
+<meta name="twitter:url" content="https://jp.sansan.com<%= options.currentUrl %>" />
+
+<%- include(`./gtm-head`) %>
