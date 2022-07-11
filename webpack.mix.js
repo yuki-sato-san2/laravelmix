@@ -45,6 +45,7 @@ mix
 		distPath,
 		{
 			mix: ejsMix,
+			PROD_DOMAIN: 'https://hoge.fuga',
 			ASSETS_IMAGE: `/assets/images/`,
 			ASSETS_CSS: `/assets/css/`,
 			ASSETS_JS: `/assets/js/`,
