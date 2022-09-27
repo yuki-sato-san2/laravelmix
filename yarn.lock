@@ -7194,6 +7194,11 @@ tfunk@^4.0.0:
     chalk "^1.1.3"
     dlv "^1.1.3"
 
+the-new-css-reset@^1.7.3:
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/the-new-css-reset/-/the-new-css-reset-1.7.3.tgz#6231ad48044c760cbf532cfd8b3e6da9d4a67e13"
+  integrity sha512-AiDZRlaS6ccC6CVHMEg+DQyZwfO0/KUvsz+vwmoOw9MlyNv/CaiOEhV1W3iw8ajQbWF0sXWYYhdKGMlCNyILPA==
+
 thunky@^1.0.2:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/thunky/-/thunky-1.1.0.tgz#5abaf714a9405db0504732bbccd2cedd9ef9537d"
